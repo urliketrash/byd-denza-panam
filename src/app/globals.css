@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* =====================================================================
+   DESIGN TOKENS — "Pure Architectural White Showroom"
+   Sumber: design system.md v2.0.0
+   Dominasi warna putih primer, kontras monokromatik presisi, tanpa emoji & simbol
+   ===================================================================== */
+
+:root {
+  --bg-canvas: #ffffff;
+  --bg-subtle: #f8fafc;
+  --bg-elevated: #ffffff;
+  --border-subtle: #e2e8f0;
+  --border-strong: #cbd5e1;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --accent-primary: #0f172a;
+  --accent-silver: #f1f5f9;
+}
+
+@theme inline {
+  --font-display: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  --color-canvas: var(--bg-canvas);
+  --color-subtle: var(--bg-subtle);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-strong: var(--border-strong);
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #ffffff;
+}
+
+body {
+  background-color: #ffffff;
+  color: #0f172a;
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(15, 23, 42, 0.12);
+  color: #0f172a;
+}
+
+/* Angka teknis wajib tabular (design system §1) */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Utilities ---------- */
+@utility glass-white {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+}
+
+@utility card-white {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ---------- Range slider (Simulasi Kredit Monokrom) ---------- */
+.range-luxury {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #0f172a var(--fill, 50%), #e2e8f0 var(--fill, 50%));
+  outline: none;
+  cursor: pointer;
+}
+.range-luxury::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 2px solid #0f172a;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.2);
+  transition: transform 0.15s ease;
+}
+.range-luxury::-webkit-slider-thumb:active {
+  transform: scale(1.15);
+}
+.range-luxury::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 2px solid #0f172a;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.2);
+}
+.range-luxury:focus-visible {
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
