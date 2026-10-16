@@ -14,6 +14,7 @@ export interface ColorSwatch {
   name: string;
   hex: string;
   border?: boolean;
+  imageUrl?: string;
 }
 
 export interface VehicleVariant {
@@ -48,11 +49,11 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     bodyLabel: 'Luxury Electric MPV',
     status: 'AVAILABLE',
     tagline: 'First-Class Luxury Electric MPV',
-    imageUrl: '/images/cars/denza-d9.png',
+    imageUrl: '/images/cars/denza-d9-black.jpg',
     colors: [
-      { name: 'Cosmos Black', hex: '#111317' },
-      { name: 'Whale Bay Blue', hex: '#2B4C65' },
-      { name: 'Arctic White', hex: '#F8FAFC', border: true },
+      { name: 'Cosmos Black', hex: '#111317', imageUrl: '/images/cars/denza-d9-black.jpg' },
+      { name: 'Arctic White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/denza-d9-white.jpg' },
+      { name: 'Whale Bay Blue', hex: '#2B4C65', imageUrl: '/images/cars/denza-d9-blue.jpg' },
     ],
     variants: [
       {
@@ -72,10 +73,10 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     bodyLabel: 'Flagship Off-Road SUV',
     status: 'ARRIVING_SOON',
     tagline: 'Beyond Bold, Beyond Boundaries',
-    imageUrl: '/images/cars/denza-b5.png',
+    imageUrl: '/images/cars/denza-b5-blue.jpg',
     colors: [
-      { name: 'Glacier Blue', hex: '#6BA4C8' },
-      { name: 'Obsidian Black', hex: '#111317' },
+      { name: 'Glacier Blue', hex: '#6BA4C8', imageUrl: '/images/cars/denza-b5-blue.jpg' },
+      { name: 'Obsidian Black', hex: '#111317', imageUrl: '/images/cars/denza-b5-black.jpg' },
     ],
     variants: [
       {
@@ -95,10 +96,10 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     bodyLabel: 'Grand Tourer Flagship',
     status: 'ARRIVING_SOON',
     tagline: 'Technology Drives Elegance',
-    imageUrl: '/images/cars/denza-z9-gt.png',
+    imageUrl: '/images/cars/denza-z9-teal.jpg',
     colors: [
-      { name: 'Emerald GT Teal', hex: '#1E6B5E' },
-      { name: 'Obsidian Black', hex: '#111317' },
+      { name: 'Emerald GT Teal', hex: '#1E6B5E', imageUrl: '/images/cars/denza-z9-teal.jpg' },
+      { name: 'Obsidian Black', hex: '#111317', imageUrl: '/images/cars/denza-z9-black.jpg' },
     ],
     variants: [
       {
@@ -122,10 +123,10 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     tagline: 'High-Performance Electric Sports Sedan',
     imageUrl: '/images/cars/byd-seal.png',
     colors: [
-      { name: 'Cosmos Black', hex: '#111317' },
-      { name: 'Atlantis Grey', hex: '#4A5568' },
-      { name: 'Arctic Blue', hex: '#2B547E' },
-      { name: 'Aurora White', hex: '#F8FAFC', border: true },
+      { name: 'Cosmos Black', hex: '#111317', imageUrl: '/images/cars/byd-seal-black.png' },
+      { name: 'Atlantis Grey', hex: '#4A5568', imageUrl: '/images/cars/byd-seal-grey.png' },
+      { name: 'Arctic Blue', hex: '#2B547E', imageUrl: '/images/cars/byd-seal.png' },
+      { name: 'Aurora White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-seal-white.png' },
     ],
     variants: [
       { id: 'seal-premium', name: 'Premium Ext Range', batteryKwh: 82.5, rangeKm: 650, priceIdr: 656_500_000 },
@@ -142,10 +143,10 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     tagline: 'Dynamic Ocean Aesthetics Performance SUV',
     imageUrl: '/images/cars/byd-sealion-7.png',
     colors: [
-      { name: 'Cosmos Black', hex: '#111317' },
-      { name: 'Harbour Grey', hex: '#4A5568' },
-      { name: 'Atlantis Blue', hex: '#2B547E' },
-      { name: 'Aurora White', hex: '#F8FAFC', border: true },
+      { name: 'Cosmos Black', hex: '#111317', imageUrl: '/images/cars/byd-sealion-7-black.png' },
+      { name: 'Harbour Grey', hex: '#4A5568', imageUrl: '/images/cars/byd-sealion-7-grey.png' },
+      { name: 'Atlantis Blue', hex: '#2B547E', imageUrl: '/images/cars/byd-sealion-7-blue.png' },
+      { name: 'Aurora White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-sealion-7-white.png' },
     ],
     variants: [
       { id: 'sealion7-premium', name: 'Premium Ext Range', batteryKwh: 82.5, rangeKm: 567, priceIdr: 640_500_000 },
@@ -162,10 +163,10 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     tagline: '7-Seater & Captain Seat Family Electric MPV',
     imageUrl: '/images/cars/byd-m6.png',
     colors: [
-      { name: 'Cosmos Black', hex: '#111317' },
-      { name: 'Inkstone Blue', hex: '#1E3A5F' },
-      { name: 'Harbour Grey', hex: '#718096' },
-      { name: 'Crystal White', hex: '#F8FAFC', border: true },
+      { name: 'Cosmos Black', hex: '#111317', imageUrl: '/images/cars/byd-m6-black.png' },
+      { name: 'Inkstone Blue', hex: '#1E3A5F', imageUrl: '/images/cars/byd-m6-blue.png' },
+      { name: 'Harbour Grey', hex: '#718096', imageUrl: '/images/cars/byd-m6-grey.png' },
+      { name: 'Crystal White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-m6-white.png' },
     ],
     variants: [
       { id: 'm6-standard', name: 'Standard', batteryKwh: 55.4, rangeKm: 420, priceIdr: 415_000_000 },
@@ -183,9 +184,9 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     tagline: 'Dual Mode (PHEV) Long-Range Family MPV',
     imageUrl: '/images/cars/byd-m6-dm.png',
     colors: [
-      { name: 'Metallic Silver', hex: '#CBD5E1', border: true },
-      { name: 'Cosmos Black', hex: '#111317' },
-      { name: 'Crystal White', hex: '#F8FAFC', border: true },
+      { name: 'Metallic Silver', hex: '#CBD5E1', border: true, imageUrl: '/images/cars/byd-m6-dm-silver.png' },
+      { name: 'Cosmos Black', hex: '#111317', imageUrl: '/images/cars/byd-m6-dm-black.png' },
+      { name: 'Crystal White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-m6-dm-white.png' },
     ],
     variants: [
       { id: 'm6-dm-classic-std', name: 'Standard', subCategory: 'CLASSIC', batteryKwh: 7.4, rangeKm: null, priceIdr: 318_500_000 },
@@ -205,9 +206,9 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     tagline: 'Expressive & Energetic Smart EV SUV',
     imageUrl: '/images/cars/byd-atto-3.png',
     colors: [
-      { name: 'Boulder Black', hex: '#111317' },
-      { name: 'Surf Blue / Grey', hex: '#3B5978' },
-      { name: 'Ski White', hex: '#F8FAFC', border: true },
+      { name: 'Boulder Black', hex: '#111317', imageUrl: '/images/cars/byd-atto-3-black.png' },
+      { name: 'Surf Blue / Grey', hex: '#3B5978', imageUrl: '/images/cars/byd-atto-3-blue.png' },
+      { name: 'Ski White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-atto-3-white.png' },
     ],
     variants: [{ id: 'atto3-adv-plus', name: 'Advanced Plus', batteryKwh: 49.9, rangeKm: 410, priceIdr: 442_000_000 }],
   },
@@ -221,12 +222,12 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     tagline: 'Agile Urban Electric Hatchback',
     imageUrl: '/images/cars/byd-dolphin.png',
     colors: [
-      { name: 'Atlantis Grey', hex: '#5A6572' },
-      { name: 'Maldives Blue', hex: '#5B9BD5' },
-      { name: 'Cream White', hex: '#F8FAFC', border: true },
-      { name: 'Deep Ocean Blue', hex: '#1B365D' },
-      { name: 'Taro Purple', hex: '#D8B4E2' },
-      { name: 'Urban Warm Grey', hex: '#ACA89F' },
+      { name: 'Atlantis Grey', hex: '#5A6572', imageUrl: '/images/cars/byd-dolphin-grey.png' },
+      { name: 'Maldives Blue', hex: '#5B9BD5', imageUrl: '/images/cars/byd-dolphin-blue.png' },
+      { name: 'Cream White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-dolphin-white.png' },
+      { name: 'Deep Ocean Blue', hex: '#1B365D', imageUrl: '/images/cars/byd-dolphin.png' },
+      { name: 'Taro Purple', hex: '#D8B4E2', imageUrl: '/images/cars/byd-dolphin-blue.png' },
+      { name: 'Urban Warm Grey', hex: '#ACA89F', imageUrl: '/images/cars/byd-dolphin-black.png' },
     ],
     variants: [{ id: 'dolphin-premium', name: 'Premium', batteryKwh: 60.4, rangeKm: 490, priceIdr: 440_300_000 }],
   },
@@ -240,9 +241,9 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     tagline: 'Compact & Efficient Daily Urban EV',
     imageUrl: '/images/cars/byd-atto-1.png',
     colors: [
-      { name: 'Obsidian Black', hex: '#111317' },
-      { name: 'Arctic White', hex: '#F8FAFC', border: true },
-      { name: 'Sprout Lime Green', hex: '#C4D600' },
+      { name: 'Obsidian Black', hex: '#111317', imageUrl: '/images/cars/byd-atto-1-black.png' },
+      { name: 'Arctic White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-atto-1-white.png' },
+      { name: 'Sprout Lime Green', hex: '#C4D600', imageUrl: '/images/cars/byd-atto-1-green.png' },
     ],
     variants: [
       { id: 'atto1-standard', name: 'Standard', batteryKwh: 30.0, rangeKm: 300, priceIdr: 222_000_000 },

@@ -99,10 +99,11 @@ export const VehicleShowroomCard: React.FC<VehicleShowroomCardProps> = ({
         {/* Vehicle Image Preview Container */}
         <div className="relative my-4 aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center p-3">
           <Image
-            src={model.imageUrl}
-            alt={`${model.name} ${activeVariant.name}`}
+            key={selectedColor.imageUrl || selectedColor.name}
+            src={selectedColor.imageUrl || model.imageUrl}
+            alt={`${model.name} ${activeVariant.name} - ${selectedColor.name}`}
             fill
-            className="object-contain transform transition-transform duration-500 group-hover:scale-105"
+            className="object-contain transform transition-all duration-500 group-hover:scale-105"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         </div>
