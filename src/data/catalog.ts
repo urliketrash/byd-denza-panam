@@ -124,8 +124,8 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     imageUrl: '/images/cars/byd-seal.png',
     colors: [
       { name: 'Cosmos Black', hex: '#111317', imageUrl: '/images/cars/byd-seal-black.png' },
-      { name: 'Atlantis Grey', hex: '#4A5568', imageUrl: '/images/cars/byd-seal-grey.png' },
-      { name: 'Arctic Blue', hex: '#2B547E', imageUrl: '/images/cars/byd-seal.png' },
+      { name: 'Arctic Grey', hex: '#64748B', imageUrl: '/images/cars/byd-seal-arctic.png' },
+      { name: 'Atlantic Grey', hex: '#334155', imageUrl: '/images/cars/byd-seal-atlantic.png' },
       { name: 'Aurora White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-seal-white.png' },
     ],
     variants: [
@@ -143,9 +143,9 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     tagline: 'Dynamic Ocean Aesthetics Performance SUV',
     imageUrl: '/images/cars/byd-sealion-7.png',
     colors: [
+      { name: 'Atlantis Grey', hex: '#2B547E', imageUrl: '/images/cars/byd-sealion-7-atlantis.png' },
+      { name: 'Shark Grey', hex: '#475569', imageUrl: '/images/cars/byd-sealion-7-shark.png' },
       { name: 'Cosmos Black', hex: '#111317', imageUrl: '/images/cars/byd-sealion-7-black.png' },
-      { name: 'Harbour Grey', hex: '#4A5568', imageUrl: '/images/cars/byd-sealion-7-grey.png' },
-      { name: 'Atlantis Blue', hex: '#2B547E', imageUrl: '/images/cars/byd-sealion-7-blue.png' },
       { name: 'Aurora White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-sealion-7-white.png' },
     ],
     variants: [
@@ -163,10 +163,10 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     tagline: '7-Seater & Captain Seat Family Electric MPV',
     imageUrl: '/images/cars/byd-m6.png',
     colors: [
+      { name: 'Aurora White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-m6-white.png' },
       { name: 'Cosmos Black', hex: '#111317', imageUrl: '/images/cars/byd-m6-black.png' },
-      { name: 'Inkstone Blue', hex: '#1E3A5F', imageUrl: '/images/cars/byd-m6-blue.png' },
-      { name: 'Harbour Grey', hex: '#718096', imageUrl: '/images/cars/byd-m6-grey.png' },
-      { name: 'Crystal White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-m6-white.png' },
+      { name: 'Quartz Blue', hex: '#1E3A5F', imageUrl: '/images/cars/byd-m6-blue.png' },
+      { name: 'Harbour Grey', hex: '#64748B', imageUrl: '/images/cars/byd-m6-grey.png' },
     ],
     variants: [
       { id: 'm6-standard', name: 'Standard', batteryKwh: 55.4, rangeKm: 420, priceIdr: 415_000_000 },
@@ -184,9 +184,10 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     tagline: 'Dual Mode (PHEV) Long-Range Family MPV',
     imageUrl: '/images/cars/byd-m6-dm.png',
     colors: [
-      { name: 'Metallic Silver', hex: '#CBD5E1', border: true, imageUrl: '/images/cars/byd-m6-dm-silver.png' },
+      { name: 'Aurora White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-m6-dm-white.png' },
       { name: 'Cosmos Black', hex: '#111317', imageUrl: '/images/cars/byd-m6-dm-black.png' },
-      { name: 'Crystal White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-m6-dm-white.png' },
+      { name: 'Quartz Blue', hex: '#1E3A5F', imageUrl: '/images/cars/byd-m6-dm-blue.png' },
+      { name: 'Harbour Grey', hex: '#64748B', imageUrl: '/images/cars/byd-m6-dm-grey.png' },
     ],
     variants: [
       { id: 'm6-dm-classic-std', name: 'Standard', subCategory: 'CLASSIC', batteryKwh: 7.4, rangeKm: null, priceIdr: 318_500_000 },
@@ -206,9 +207,10 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     tagline: 'Expressive & Energetic Smart EV SUV',
     imageUrl: '/images/cars/byd-atto-3.png',
     colors: [
-      { name: 'Boulder Black', hex: '#111317', imageUrl: '/images/cars/byd-atto-3-black.png' },
-      { name: 'Surf Blue / Grey', hex: '#3B5978', imageUrl: '/images/cars/byd-atto-3-blue.png' },
       { name: 'Ski White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-atto-3-white.png' },
+      { name: 'Cosmos Black', hex: '#111317', imageUrl: '/images/cars/byd-atto-3-black.png' },
+      { name: 'Atlantic Grey', hex: '#3B5978', imageUrl: '/images/cars/byd-atto-3-atlantic.png' },
+      { name: 'Harbour Grey', hex: '#64748B', imageUrl: '/images/cars/byd-atto-3-harbour.png' },
     ],
     variants: [{ id: 'atto3-adv-plus', name: 'Advanced Plus', batteryKwh: 49.9, rangeKm: 410, priceIdr: 442_000_000 }],
   },
@@ -222,12 +224,10 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     tagline: 'Agile Urban Electric Hatchback',
     imageUrl: '/images/cars/byd-dolphin.png',
     colors: [
-      { name: 'Atlantis Grey', hex: '#5A6572', imageUrl: '/images/cars/byd-dolphin-grey.png' },
-      { name: 'Maldives Blue', hex: '#5B9BD5', imageUrl: '/images/cars/byd-dolphin-blue.png' },
-      { name: 'Cream White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-dolphin-white.png' },
-      { name: 'Deep Ocean Blue', hex: '#1B365D', imageUrl: '/images/cars/byd-dolphin.png' },
-      { name: 'Taro Purple', hex: '#D8B4E2', imageUrl: '/images/cars/byd-dolphin-blue.png' },
-      { name: 'Urban Warm Grey', hex: '#ACA89F', imageUrl: '/images/cars/byd-dolphin-black.png' },
+      { name: 'Coral Pink', hex: '#E09F9C', imageUrl: '/images/cars/byd-dolphin-pink.png' },
+      { name: 'Surf Blue', hex: '#5B9BD5', imageUrl: '/images/cars/byd-dolphin-blue.png' },
+      { name: 'Ski White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-dolphin-white.png' },
+      { name: 'Atlantic Grey', hex: '#5A6572', imageUrl: '/images/cars/byd-dolphin-grey.png' },
     ],
     variants: [{ id: 'dolphin-premium', name: 'Premium', batteryKwh: 60.4, rangeKm: 490, priceIdr: 440_300_000 }],
   },
@@ -241,9 +241,9 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     tagline: 'Compact & Efficient Daily Urban EV',
     imageUrl: '/images/cars/byd-atto-1.png',
     colors: [
-      { name: 'Obsidian Black', hex: '#111317', imageUrl: '/images/cars/byd-atto-1-black.png' },
-      { name: 'Arctic White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-atto-1-white.png' },
-      { name: 'Sprout Lime Green', hex: '#C4D600', imageUrl: '/images/cars/byd-atto-1-green.png' },
+      { name: 'Sprout Green', hex: '#C4D600', imageUrl: '/images/cars/byd-atto-1.png' },
+      { name: 'Cosmos Black', hex: '#111317', imageUrl: '/images/cars/byd-atto-1-black.png' },
+      { name: 'Apricity White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-atto-1-white.png' },
     ],
     variants: [
       { id: 'atto1-standard', name: 'Standard', batteryKwh: 30.0, rangeKm: 300, priceIdr: 222_000_000 },
