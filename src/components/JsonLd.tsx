@@ -1,5 +1,5 @@
 import React from 'react';
-import { SITE } from '@/data/site';
+import { SITE, FAQS } from '@/data/site';
 import { SHOWROOM_CATALOG } from '@/data/catalog';
 
 export const JsonLd: React.FC = () => {
@@ -11,7 +11,7 @@ export const JsonLd: React.FC = () => {
         '@id': `${SITE.url}#dealer`,
         name: `${SITE.name} — ${SITE.group}`,
         description:
-          'Dealer dan Digital Showroom resmi BYD & Denza Panam Pekanbaru, melayani penjualan, test drive di rumah, dan suku cadang resmi di Riau.',
+          'Dealer dan Digital Showroom resmi BYD & DANZA Pekanbaru (Arista Group), melayani penjualan unit mobil listrik, simulasi kredit, test drive di rumah, dan suku cadang resmi di Riau.',
         url: SITE.url,
         telephone: SITE.whatsappDisplay,
         address: {
@@ -21,8 +21,27 @@ export const JsonLd: React.FC = () => {
           addressRegion: SITE.region,
           addressCountry: 'ID',
         },
+        employee: {
+          '@type': 'Person',
+          name: SITE.sales.fullName,
+          jobTitle: SITE.sales.title,
+          telephone: SITE.whatsappDisplay,
+          email: SITE.sales.email,
+        },
         openingHours: 'Mo-Sa 08:30-17:00, Su 09:00-15:00',
         priceRange: 'Rp 222.000.000 - Rp 986.500.000',
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${SITE.url}#faq`,
+        mainEntity: FAQS.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
       },
       ...SHOWROOM_CATALOG.filter((m) => m.variants.some((v) => v.priceIdr !== null)).map((m) => {
         const minPrice = Math.min(
@@ -59,9 +78,7 @@ export const JsonLd: React.FC = () => {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData).replace(/</g, '\\u003c'),
-      }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
     />
   );
 };

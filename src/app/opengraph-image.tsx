@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'BYD / Denza Panam - Digital Showroom Arista Pekanbaru';
+export const alt = 'BYD Arista Pekanbaru - Digital Showroom Mobil Listrik & DANZA';
 export const size = {
   width: 1200,
   height: 630,
@@ -28,32 +28,32 @@ export default async function Image() {
       >
         {/* Top bar with Badge */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
             <span
               style={{
-                fontSize: 32,
+                fontSize: 36,
                 fontWeight: 900,
                 letterSpacing: '2px',
                 color: '#0F172A',
               }}
             >
-              BYD <span style={{ color: '#94A3B8', fontWeight: 300 }}>/</span> DENZA
+              BYD
             </span>
-            <span
+            <div
               style={{
-                backgroundColor: '#F8FAFC',
-                border: '1px solid #CBD5E1',
-                borderRadius: '8px',
-                padding: '4px 12px',
-                fontSize: 14,
-                fontWeight: 700,
-                color: '#334155',
-                textTransform: 'uppercase',
-                letterSpacing: '3px',
+                display: 'flex',
+                flexDirection: 'column',
+                borderLeft: '2px solid #CBD5E1',
+                paddingLeft: '12px',
               }}
             >
-              Panam
-            </span>
+              <span style={{ fontSize: 13, fontWeight: 800, color: '#0F172A', letterSpacing: '2px' }}>
+                ARISTA
+              </span>
+              <span style={{ fontSize: 11, fontWeight: 600, color: '#64748B' }}>
+                Pekanbaru
+              </span>
+            </div>
           </div>
 
           <div
@@ -69,7 +69,7 @@ export default async function Image() {
               color: '#475569',
             }}
           >
-            ARISTA / Terbaik dan Terpercaya
+            Dealer Resmi & Bengkel ARISTA Riau
           </div>
         </div>
 
@@ -84,21 +84,21 @@ export default async function Image() {
               textTransform: 'uppercase',
             }}
           >
-            Official Digital Showroom & VIP Lead Generation
+            Official Digital Showroom & Sales Consultant
           </div>
           <div
             style={{
-              fontSize: 52,
+              fontSize: 50,
               fontWeight: 800,
               lineHeight: 1.15,
               color: '#0F172A',
-              maxWidth: '960px',
+              maxWidth: '980px',
             }}
           >
-            Showroom Mobil Listrik BYD dan Denza Luxury Pekanbaru
+            Showroom Mobil Listrik BYD & DANZA Luxury Pekanbaru
           </div>
-          <div style={{ fontSize: 22, color: '#64748B', maxWidth: '850px' }}>
-            Denza D9, BYD Seal, Sealion 7, M6 Dual Mode, Simulasi Kredit dan Test Drive di Rumah
+          <div style={{ fontSize: 22, color: '#64748B', maxWidth: '880px' }}>
+            DANZA D9, BYD Seal, Sealion 7, M6 Dual Mode. Layanan VIP Test Drive bersama Suci Primayuri.
           </div>
         </div>
 
@@ -149,7 +149,7 @@ export default async function Image() {
               fontWeight: 700,
             }}
           >
-            Gratis Home Test Drive
+            WhatsApp Sales: 0823 8767 7722
           </div>
         </div>
       </div>

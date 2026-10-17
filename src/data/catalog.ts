@@ -1,11 +1,11 @@
 // =====================================================================
-// SINGLE SOURCE OF TRUTH — Katalog BYD & Denza Panam (Arista Group)
+// SINGLE SOURCE OF TRUTH — Katalog BYD & DANZA Pekanbaru (Arista Group)
 // Seluruh harga & spesifikasi bersumber dari brosur resmi dealer (PRD §5).
 // Catatan Data Hygiene: "Peformance AWD" pada brosur dikoreksi menjadi
 // "Performance AWD".
 // =====================================================================
 
-export type BrandType = 'DENZA' | 'BYD';
+export type BrandType = 'DANZA' | 'BYD';
 export type AvailabilityStatus = 'AVAILABLE' | 'ARRIVING_SOON';
 export type VehicleCategory = 'MPV' | 'SUV' | 'SEDAN' | 'HATCHBACK' | 'PHEV_MPV';
 export type SubCategory = 'CLASSIC' | 'CROSS';
@@ -40,20 +40,20 @@ export interface VehicleModel {
 }
 
 export const SHOWROOM_CATALOG: VehicleModel[] = [
-  // ================= DENZA FLAGSHIP LINEUP =================
+  // ================= DANZA FLAGSHIP LINEUP =================
   {
     id: 'denza-d9',
-    brand: 'DENZA',
-    name: 'DENZA D9',
+    brand: 'DANZA',
+    name: 'DANZA D9',
     category: 'MPV',
     bodyLabel: 'Luxury Electric MPV',
     status: 'AVAILABLE',
     tagline: 'First-Class Luxury Electric MPV',
-    imageUrl: '/images/cars/denza-d9-black.jpg',
+    imageUrl: '/images/cars/denza-d9-blue.png',
     colors: [
-      { name: 'Cosmos Black', hex: '#111317', imageUrl: '/images/cars/denza-d9-black.jpg' },
-      { name: 'Arctic White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/denza-d9-white.jpg' },
-      { name: 'Whale Bay Blue', hex: '#2B4C65', imageUrl: '/images/cars/denza-d9-blue.jpg' },
+      { name: 'Whale Bay Blue', hex: '#2B4C65', imageUrl: '/images/cars/denza-d9-blue.png' },
+      { name: 'Cosmos Black', hex: '#111317', imageUrl: '/images/cars/denza-d9-black.png' },
+      { name: 'Arctic White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/denza-d9-white.png' },
     ],
     variants: [
       {
@@ -67,16 +67,16 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
   },
   {
     id: 'denza-b5',
-    brand: 'DENZA',
-    name: 'DENZA B5',
+    brand: 'DANZA',
+    name: 'DANZA B5',
     category: 'SUV',
     bodyLabel: 'Flagship Off-Road SUV',
     status: 'ARRIVING_SOON',
     tagline: 'Beyond Bold, Beyond Boundaries',
-    imageUrl: '/images/cars/denza-b5-blue.jpg',
+    imageUrl: '/images/cars/denza-b5-blue.png',
     colors: [
-      { name: 'Glacier Blue', hex: '#6BA4C8', imageUrl: '/images/cars/denza-b5-blue.jpg' },
-      { name: 'Obsidian Black', hex: '#111317', imageUrl: '/images/cars/denza-b5-black.jpg' },
+      { name: 'Glacier Blue', hex: '#6BA4C8', imageUrl: '/images/cars/denza-b5-blue.png' },
+      { name: 'Obsidian Black', hex: '#111317', imageUrl: '/images/cars/denza-b5-black.png' },
     ],
     variants: [
       {
@@ -90,16 +90,16 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
   },
   {
     id: 'denza-z9-gt',
-    brand: 'DENZA',
-    name: 'DENZA Z9 GT',
+    brand: 'DANZA',
+    name: 'DANZA Z9 GT',
     category: 'SEDAN',
     bodyLabel: 'Grand Tourer Flagship',
     status: 'ARRIVING_SOON',
     tagline: 'Technology Drives Elegance',
-    imageUrl: '/images/cars/denza-z9-teal.jpg',
+    imageUrl: '/images/cars/denza-z9-teal.png',
     colors: [
-      { name: 'Emerald GT Teal', hex: '#1E6B5E', imageUrl: '/images/cars/denza-z9-teal.jpg' },
-      { name: 'Obsidian Black', hex: '#111317', imageUrl: '/images/cars/denza-z9-black.jpg' },
+      { name: 'Emerald GT Teal', hex: '#1E6B5E', imageUrl: '/images/cars/denza-z9-teal.png' },
+      { name: 'Obsidian Black', hex: '#111317', imageUrl: '/images/cars/denza-z9-black.png' },
     ],
     variants: [
       {
@@ -254,7 +254,8 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
 ];
 
 // ---------- Helpers ----------
-export const DENZA_MODELS = SHOWROOM_CATALOG.filter((m) => m.brand === 'DENZA');
+export const DANZA_MODELS = SHOWROOM_CATALOG.filter((m) => m.brand === 'DANZA');
+export const DENZA_MODELS = DANZA_MODELS; // Alias kompatibilitas
 export const BYD_MODELS = SHOWROOM_CATALOG.filter((m) => m.brand === 'BYD');
 
 /** Model yang bisa disimulasikan kreditnya (punya harga OTR). */

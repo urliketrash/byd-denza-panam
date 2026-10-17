@@ -66,7 +66,7 @@ export function buildBookingMessage(input: BookingMessageInput, attribution: Att
     : 'Fleksibel';
 
   const lines = [
-    `Halo ${SITE.name}`,
+    `Halo Kak ${SITE.sales.nickname} (${SITE.name})`,
     '',
     `Saya ${input.name || '-'} ingin mengajukan:`,
     `Layanan: ${input.service}`,
@@ -75,7 +75,7 @@ export function buildBookingMessage(input: BookingMessageInput, attribution: Att
     input.color ? `Warna: ${input.color}` : null,
     `Rencana: ${formattedDate}`,
     '',
-    'Mohon informasi lebih lanjut. Terima kasih.',
+    'Mohon informasi lebih lanjut dan penawaran terbaiknya. Terima kasih.',
   ].filter((l): l is string => l !== null);
 
   return lines.join('\n') + attributionBlock(attribution);
@@ -83,7 +83,7 @@ export function buildBookingMessage(input: BookingMessageInput, attribution: Att
 
 export function buildQuickChatMessage(attribution: Attribution) {
   return (
-    `Halo ${SITE.name}\nSaya ingin konsultasi mengenai unit BYD dan Denza. Mohon dibantu.` +
+    `Halo Kak ${SITE.sales.nickname} (${SITE.name}), saya ingin konsultasi mengenai unit mobil listrik BYD dan DANZA Pekanbaru. Mohon dibantu.` +
     attributionBlock(attribution)
   );
 }

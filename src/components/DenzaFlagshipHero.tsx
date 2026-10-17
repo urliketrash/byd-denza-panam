@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { DENZA_MODELS, VehicleModel } from '@/data/catalog';
+import { DANZA_MODELS, VehicleModel } from '@/data/catalog';
 import { formatRupiah } from '@/lib/format';
-import { BatteryCharging, Gauge, ChevronRight, Calculator, Calendar } from 'lucide-react';
+import { BatteryCharging, Gauge, ChevronRight, Calculator, Calendar, Award } from 'lucide-react';
 
 interface DenzaFlagshipHeroProps {
   onOpenBooking: (unit?: string, variant?: string) => void;
@@ -12,47 +12,47 @@ interface DenzaFlagshipHeroProps {
 }
 
 export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBooking, onOpenCredit }) => {
-  const d9 = DENZA_MODELS.find((m) => m.id === 'denza-d9')!;
-  const b5 = DENZA_MODELS.find((m) => m.id === 'denza-b5')!;
-  const z9gt = DENZA_MODELS.find((m) => m.id === 'denza-z9-gt')!;
+  const d9 = DANZA_MODELS.find((m) => m.id === 'denza-d9')!;
+  const b5 = DANZA_MODELS.find((m) => m.id === 'denza-b5')!;
+  const z9gt = DANZA_MODELS.find((m) => m.id === 'denza-z9-gt')!;
 
   const [d9SelectedColor, setD9SelectedColor] = useState(d9.colors[0]);
   const [b5SelectedColor, setB5SelectedColor] = useState(b5.colors[0]);
   const [z9SelectedColor, setZ9SelectedColor] = useState(z9gt.colors[0]);
 
   return (
-    <section id="denza-flagship" className="relative overflow-hidden bg-white pt-6 pb-12 sm:pt-10 sm:pb-16 text-slate-900 border-b border-slate-200">
+    <section id="denza-flagship" className="relative overflow-hidden bg-white pt-8 pb-14 sm:pt-12 sm:pb-20 text-slate-900 border-b border-slate-200">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Header Eyebrow & Title */}
-        <div className="mb-6 sm:mb-8 text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-bold text-slate-700 tracking-wider uppercase mb-2">
-            <span>Denza Luxury Flagship Showcase</span>
+        {/* Header Eyebrow & Title - Pure White Architectural Styling */}
+        <div className="mb-8 sm:mb-12 text-center max-w-4xl mx-auto">
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1 text-[11px] font-bold text-slate-700 tracking-wider uppercase mb-3">
+            <Award className="h-3.5 w-3.5 text-slate-900" />
+            <span>Dealer Resmi Mobil Listrik PT Arista Group Pekanbaru</span>
           </div>
-          <h1 className="font-display text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-            Kemewahan Elektrik Kelas Eksekutif di Pekanbaru
+          <h1 className="font-display text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 leading-[1.15]">
+            <span className="block">Showroom Resmi</span>
+            <span className="block mt-1 sm:mt-1.5">BYD & DANZA Luxury Pekanbaru</span>
           </h1>
-          <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
-            Standar baru mobilitas VIP di Riau melalui lini flagship DENZA oleh ARISTA, didukung layanan personal VIP Home Test Drive.
+          <p className="mt-3.5 text-xs sm:text-sm lg:text-[15px] text-slate-600 max-w-3xl lg:max-w-4xl mx-auto font-normal leading-relaxed text-center sm:text-justify [text-align-last:center]">
+            Pusat penjualan, pemesanan kuota VIP, dan layanan uji coba berkendara resmi di Provinsi Riau. Dapatkan penawaran OTR terkini, program subsidi DP ringan, garansi Blade Battery 8 tahun, dan VIP Home Test Drive langsung ke kediaman Anda.
           </p>
+
         </div>
 
-        {/* Bento Grid */}
+        {/* Bento Grid - Pure White Studio Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-stretch">
-          {/* Main Hero Card: Denza D9 (Span 7 Col on lg) */}
-          <div className="lg:col-span-7 flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 shadow-xs hover:shadow-md transition-all duration-300 relative group">
+          {/* Main Hero Card: DANZA D9 (Span 7 Col on lg) */}
+          <div className="lg:col-span-7 flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-5 sm:p-7 shadow-xs hover:shadow-md transition-all duration-300 relative group">
             <div>
               {/* Card Header */}
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="rounded-md bg-slate-100 border border-slate-200 px-2 py-0.5 text-[10px] font-bold text-slate-800 uppercase tracking-wider">
-                      VIP MPV
-                    </span>
-                    <span className="rounded-md bg-slate-900 text-white px-2 py-0.5 text-[10px] font-semibold">
-                      Unit Ready
+                    <span className="rounded-md bg-slate-100 border border-slate-200 px-2.5 py-0.5 text-[10px] font-bold text-slate-800 uppercase tracking-wider">
+                      VIP Luxury MPV
                     </span>
                   </div>
-                  <h2 className="font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 mt-1">
+                  <h2 className="font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 mt-2">
                     {d9.name}
                   </h2>
                   <p className="text-xs text-slate-500 font-normal mt-0.5">
@@ -86,12 +86,12 @@ export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBook
                 </div>
               </div>
 
-              {/* Main Vehicle Image on High-Key Studio Background */}
-              <div className="relative my-3 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-white border border-slate-100/80 flex items-center justify-center p-2">
+              {/* Main Vehicle Image on Pure High-Key Studio Background */}
+              <div className="relative my-4 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-slate-50/50 border border-slate-100 flex items-center justify-center p-3">
                 <Image
                   key={d9SelectedColor.imageUrl || d9SelectedColor.name}
                   src={d9SelectedColor.imageUrl || d9.imageUrl}
-                  alt={`DENZA D9 Luxury Electric MPV - ${d9SelectedColor.name}`}
+                  alt={`DANZA D9 Luxury Electric MPV - ${d9SelectedColor.name}`}
                   fill
                   priority
                   className="object-contain transform transition-all duration-500 group-hover:scale-[1.02]"
@@ -99,8 +99,8 @@ export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBook
                 />
               </div>
 
-              {/* Official Price & Specs Box - Un-squeezed Layout */}
-              <div className="rounded-2xl border border-slate-200/90 bg-slate-50/70 p-3.5 sm:p-4">
+              {/* Official Price & Specs Box */}
+              <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-4 sm:p-5">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div>
                     <span className="text-[10px] font-bold text-slate-500 tracking-wider uppercase block">
@@ -111,8 +111,8 @@ export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBook
                     </div>
                   </div>
 
-                  {/* Spec Badges in Solid White Container to Prevent Clipping */}
-                  <div className="flex items-center gap-3 bg-white border border-slate-200/90 rounded-xl px-3.5 py-2 shrink-0 shadow-2xs">
+                  {/* Spec Badges in Solid White Container */}
+                  <div className="flex items-center gap-3 bg-white border border-slate-200 rounded-xl px-3.5 py-2 shrink-0 shadow-2xs">
                     <div className="flex items-center gap-2">
                       <div className="h-7 w-7 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 shrink-0">
                         <Gauge className="h-3.5 w-3.5" />
@@ -137,8 +137,8 @@ export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBook
               </div>
             </div>
 
-            {/* CTAs - Prominently Displayed */}
-            <div className="mt-3.5 pt-3.5 border-t border-slate-100 flex flex-col sm:flex-row items-center gap-3">
+            {/* CTAs */}
+            <div className="mt-4 pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center gap-3">
               <button
                 type="button"
                 onClick={() => onOpenBooking(d9.name, d9.variants[0].name)}
@@ -159,10 +159,10 @@ export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBook
             </div>
           </div>
 
-          {/* Teaser Stack Cards: Denza B5 & Denza Z9 GT (Span 5 Col on lg) */}
-          <div className="lg:col-span-5 flex flex-col gap-4 sm:gap-5 justify-between">
-            {/* Card Denza B5 */}
-            <div className="flex-1 rounded-3xl border border-slate-200 bg-white p-4 sm:p-5 shadow-xs hover:shadow-md transition-all duration-300 relative group flex flex-col justify-between">
+          {/* Teaser Stack Cards: DANZA B5 & DANZA Z9 GT (Span 5 Col on lg) - Pure White Studio */}
+          <div className="lg:col-span-5 flex flex-col gap-5 justify-between">
+            {/* Card DANZA B5 */}
+            <div className="flex-1 rounded-3xl border border-slate-200 bg-white p-5 shadow-xs hover:shadow-md transition-all duration-300 relative group flex flex-col justify-between">
               <div>
                 <div className="flex items-start justify-between gap-3">
                   <div>
@@ -172,7 +172,7 @@ export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBook
                       </span>
                       <span className="text-[11px] text-slate-500 font-medium">Off-Road Luxury</span>
                     </div>
-                    <h3 className="font-display text-lg sm:text-xl font-bold tracking-tight text-slate-900 mt-1">
+                    <h3 className="font-display text-lg sm:text-xl font-bold tracking-tight text-slate-900 mt-1.5">
                       {b5.name}
                     </h3>
                     <p className="text-[10px] sm:text-[11px] text-slate-500 font-semibold tracking-wider uppercase mt-0.5">
@@ -201,36 +201,36 @@ export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBook
                   </div>
                 </div>
 
-                {/* Widescreen Vehicle Image Container */}
-                <div className="relative my-2.5 aspect-[16/8] w-full overflow-hidden rounded-xl bg-slate-950 flex items-center justify-center p-2">
+                {/* Pure White Studio Vehicle Image Container */}
+                <div className="relative my-3 aspect-[16/8] w-full overflow-hidden rounded-2xl bg-slate-50/70 border border-slate-100 flex items-center justify-center p-2">
                   <Image
                     key={b5SelectedColor.imageUrl || b5SelectedColor.name}
                     src={b5SelectedColor.imageUrl || b5.imageUrl}
-                    alt={`DENZA B5 Luxury Off-Road SUV - ${b5SelectedColor.name}`}
+                    alt={`DANZA B5 Luxury Off-Road SUV - ${b5SelectedColor.name}`}
                     fill
-                    className="object-cover transform transition-all duration-500 group-hover:scale-105"
+                    className="object-contain transform transition-all duration-500 group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 40vw"
                   />
                 </div>
 
-                <div className="flex items-center justify-between text-xs text-slate-600 py-1.5 px-3 rounded-xl bg-slate-50 border border-slate-100">
-                  <span className="text-[11px]">Status Kuota Pekanbaru:</span>
+                <div className="flex items-center justify-between text-xs text-slate-600 py-2 px-3 rounded-xl bg-slate-50 border border-slate-100">
+                  <span className="text-[11px] font-medium">Status Kuota Riau:</span>
                   <span className="text-[11px] font-bold text-slate-900">Pre-Book Dibuka</span>
                 </div>
               </div>
 
               <button
                 type="button"
-                onClick={() => onOpenBooking(b5.name, 'Pre-Book Denza B5')}
-                className="mt-2.5 w-full flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 py-2.5 text-xs font-bold text-slate-800 transition-all cursor-pointer"
+                onClick={() => onOpenBooking(b5.name, 'Pre-Book DANZA B5')}
+                className="mt-3 w-full flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 py-2.5 text-xs font-bold text-slate-800 transition-all cursor-pointer"
               >
                 <span>Daftar Prioritas Peluncuran</span>
                 <ChevronRight className="h-3.5 w-3.5" />
               </button>
             </div>
 
-            {/* Card Denza Z9 GT */}
-            <div className="flex-1 rounded-3xl border border-slate-200 bg-white p-4 sm:p-5 shadow-xs hover:shadow-md transition-all duration-300 relative group flex flex-col justify-between">
+            {/* Card DANZA Z9 GT */}
+            <div className="flex-1 rounded-3xl border border-slate-200 bg-white p-5 shadow-xs hover:shadow-md transition-all duration-300 relative group flex flex-col justify-between">
               <div>
                 <div className="flex items-start justify-between gap-3">
                   <div>
@@ -240,7 +240,7 @@ export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBook
                       </span>
                       <span className="text-[11px] text-slate-500 font-medium">Grand Tourer</span>
                     </div>
-                    <h3 className="font-display text-lg sm:text-xl font-bold tracking-tight text-slate-900 mt-1">
+                    <h3 className="font-display text-lg sm:text-xl font-bold tracking-tight text-slate-900 mt-1.5">
                       {z9gt.name}
                     </h3>
                     <p className="text-[10px] sm:text-[11px] text-slate-500 font-semibold tracking-wider uppercase mt-0.5">
@@ -269,28 +269,28 @@ export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBook
                   </div>
                 </div>
 
-                {/* Widescreen Vehicle Image Container */}
-                <div className="relative my-2.5 aspect-[16/8] w-full overflow-hidden rounded-xl bg-slate-950 flex items-center justify-center p-2">
+                {/* Pure White Studio Vehicle Image Container */}
+                <div className="relative my-3 aspect-[16/8] w-full overflow-hidden rounded-2xl bg-slate-50/70 border border-slate-100 flex items-center justify-center p-2">
                   <Image
                     key={z9SelectedColor.imageUrl || z9SelectedColor.name}
                     src={z9SelectedColor.imageUrl || z9gt.imageUrl}
-                    alt={`DENZA Z9 GT Grand Tourer - ${z9SelectedColor.name}`}
+                    alt={`DANZA Z9 GT Grand Tourer - ${z9SelectedColor.name}`}
                     fill
-                    className="object-cover transform transition-all duration-500 group-hover:scale-105"
+                    className="object-contain transform transition-all duration-500 group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 40vw"
                   />
                 </div>
 
-                <div className="flex items-center justify-between text-xs text-slate-600 py-1.5 px-3 rounded-xl bg-slate-50 border border-slate-100">
-                  <span className="text-[11px]">Status Alokasi Riau:</span>
+                <div className="flex items-center justify-between text-xs text-slate-600 py-2 px-3 rounded-xl bg-slate-50 border border-slate-100">
+                  <span className="text-[11px] font-medium">Status Alokasi Pekanbaru:</span>
                   <span className="text-[11px] font-bold text-slate-900">VIP Priority Waitlist</span>
                 </div>
               </div>
 
               <button
                 type="button"
-                onClick={() => onOpenBooking(z9gt.name, 'Pre-Book Denza Z9 GT')}
-                className="mt-2.5 w-full flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 py-2.5 text-xs font-bold text-slate-800 transition-all cursor-pointer"
+                onClick={() => onOpenBooking(z9gt.name, 'Pre-Book DANZA Z9 GT')}
+                className="mt-3 w-full flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 py-2.5 text-xs font-bold text-slate-800 transition-all cursor-pointer"
               >
                 <span>Daftar VIP Waitlist Eksklusif</span>
                 <ChevronRight className="h-3.5 w-3.5" />

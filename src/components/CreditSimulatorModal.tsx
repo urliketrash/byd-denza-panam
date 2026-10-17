@@ -94,7 +94,7 @@ export const CreditSimulatorModal: React.FC<CreditSimulatorModalProps> = ({
   // WhatsApp message generator for credit simulation without emojis/symbols
   const handleSendToWhatsApp = () => {
     const lines = [
-      `Halo ${SITE.name}`,
+      `Halo Kak ${SITE.sales.nickname} (${SITE.name})`,
       '',
       `Saya tertarik dengan simulasi kredit berikut:`,
       `Unit: ${currentModel.name}`,
@@ -106,6 +106,23 @@ export const CreditSimulatorModal: React.FC<CreditSimulatorModalProps> = ({
       '',
       'Mohon rincian paket pembiayaan dan penawaran resmi terkini.',
     ];
+
+    // Catat lead simulasi kredit ke Google Sheets CRM via background API tanpa menghambat WhatsApp
+    try {
+      fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nama: 'Prospek Simulasi Kredit',
+          unit: currentModel.name,
+          variant: currentVariant.name,
+          serviceType: 'Simulasi Kredit',
+          notes: `DP ${dpPercent}% (${formatRupiah(result.downPayment)}) | Tenor ${tenorYears} Thn (${result.months} Bln) | Est. Cicilan ${formatRupiah(result.monthly)}/bln`,
+        }),
+      }).catch(() => {});
+    } catch {
+      // ignore
+    }
 
     const message = lines.join('\n');
     const waUrl = buildWhatsAppUrl(message);
@@ -131,7 +148,7 @@ export const CreditSimulatorModal: React.FC<CreditSimulatorModalProps> = ({
                 Kalkulator Simulasi Kredit
               </h3>
               <p className="text-xs text-slate-500">
-                Estimasi pembiayaan resmi BYD dan Denza Pekanbaru
+                Estimasi pembiayaan resmi BYD dan DANZA Pekanbaru
               </p>
             </div>
           </div>

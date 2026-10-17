@@ -23,24 +23,30 @@ const jetbrains = JetBrains_Mono({
   display: 'swap',
 });
 
-const title = 'BYD & Denza Pekanbaru — Digital Showroom Resmi | BYD | Denza Panam (Arista Group)';
+const title = 'BYD Arista Pekanbaru — Dealer & Digital Showroom Resmi Mobil Listrik & DANZA';
 const description =
-  'Showroom digital resmi BYD & Denza Panam Pekanbaru, Riau. Cek harga OTR terbaru Denza D9, BYD Seal, Sealion 7, M6, M6 DM, Atto 3, Dolphin & Atto 1, simulasi kredit instan, dan jadwalkan test drive di rumah via WhatsApp.';
+  'Showroom digital resmi BYD Arista Pekanbaru, Riau. Cek harga OTR resmi terbaru DANZA D9, BYD Seal, Sealion 7, M6, M6 DM, Atto 3, Dolphin & Atto 1, simulasi kredit instan, serta konsultasi langsung dengan Sales Consultant resmi Suci Primayuri.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title,
   description,
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
   keywords: [
     'BYD Pekanbaru',
-    'Denza Pekanbaru',
+    'DANZA Pekanbaru',
     'Dealer BYD Riau',
     'Harga BYD Seal Pekanbaru',
-    'Harga Denza D9',
-    'BYD M6 DM',
+    'Harga DANZA D9',
+    'BYD M6 Pekanbaru',
     'Mobil Listrik Pekanbaru',
     'Arista Group',
-    'BYD Panam',
+    'BYD Soebrantas',
+    'Sales BYD Pekanbaru Suci',
   ],
   alternates: { canonical: '/' },
   openGraph: {
@@ -48,27 +54,27 @@ export const metadata: Metadata = {
     locale: 'id_ID',
     url: '/',
     siteName: SITE.name,
-    title: 'BYD / Denza Panam - Digital Showroom Pekanbaru',
-    description: 'Denza D9 mulai Rp 986,5 Juta, BYD Atto 1 mulai Rp 222 Juta. Simulasi kredit dan test drive di rumah.',
+    title: 'BYD Arista Pekanbaru — Dealer & Digital Showroom Resmi',
+    description: 'DANZA D9 mulai Rp 986,5 Juta, BYD Atto 1 mulai Rp 222 Juta. Konsultasi dan simulasi kredit bersama Suci Primayuri.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BYD | Denza Panam — Digital Showroom Pekanbaru',
-    description: 'Harga OTR resmi, simulasi kredit, dan test drive BYD & Denza di Pekanbaru.',
+    title: 'BYD Arista Pekanbaru — Dealer Resmi Mobil Listrik & DANZA',
+    description: 'Harga OTR resmi, simulasi kredit, dan konsultasi test drive BYD & DANZA Pekanbaru.',
   },
   robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
-  themeColor: '#05070c',
+  themeColor: '#ffffff',
   width: 'device-width',
   initialScale: 1,
 };
 
-export default function RootLayout({ children }: LayoutProps<'/'>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id" className={`${jakarta.variable} ${inter.variable} ${jetbrains.variable} antialiased`}>
-      <body className="min-h-dvh" suppressHydrationWarning>
+      <body className="min-h-dvh bg-white text-slate-900" suppressHydrationWarning>
         {children}
       </body>
     </html>

@@ -5,8 +5,10 @@ import { useAttribution } from '@/hooks/useAttribution';
 import { Navbar } from '@/components/Navbar';
 import { DenzaFlagshipHero } from '@/components/DenzaFlagshipHero';
 import { BydCatalogSection } from '@/components/BydCatalogSection';
+import { DealerAdvantagesSection } from '@/components/DealerAdvantagesSection';
 import { CreditSimulatorModal } from '@/components/CreditSimulatorModal';
 import { TestDriveBookingSection } from '@/components/TestDriveBookingSection';
+import { FaqSection } from '@/components/FaqSection';
 import { StickyMobileBar } from '@/components/StickyMobileBar';
 import { Footer } from '@/components/Footer';
 import { JsonLd } from '@/components/JsonLd';
@@ -51,27 +53,33 @@ export default function Home() {
       />
 
       <main className="flex-1">
-        {/* FR-01: Denza Flagship Luxury Hero (Obsidian Dark Atmosphere) */}
+        {/* SECTION 1 & 2: Master Hero Showcase & DANZA Flagship Executive (Pure Architectural White Studio) */}
         <DenzaFlagshipHero
           onOpenBooking={handleOpenBooking}
           onOpenCredit={(model) => handleOpenCredit(model)}
         />
 
-        {/* FR-02: Interactive BYD Showroom Catalog (Clean Daylight Atmosphere) */}
+        {/* SECTION 3: Interactive BYD Showroom Catalog (Clean Daylight Atmosphere) */}
         <BydCatalogSection
           onOpenCredit={handleOpenCredit}
           onOpenBooking={handleOpenBooking}
         />
 
-        {/* FR-04: Smart Test Drive & Pemesanan Booking Section */}
+        {/* SECTION 4: 4 Pillars of Arista Panam Trust (Blade Battery, 3S Soebrantas, Wall Charger, VIP Concierge) */}
+        <DealerAdvantagesSection />
+
+        {/* SECTION 5 & 6: Official Sales Consultant (Suci Primayuri) & Smart Test Drive Booking */}
         <TestDriveBookingSection
           attribution={attribution}
           prefilledUnit={prefilledBookingUnit}
           prefilledVariant={prefilledBookingVariant}
         />
+
+        {/* SECTION 7: Interactive FAQ Accordion for Local SEO & Buyer Guidance */}
+        <FaqSection />
       </main>
 
-      {/* FR-03: Interactive Credit Simulator Modal */}
+      {/* Interactive Credit Simulator Modal */}
       <CreditSimulatorModal
         isOpen={isCreditModalOpen}
         onClose={() => setIsCreditModalOpen(false)}
@@ -80,7 +88,7 @@ export default function Home() {
         attribution={attribution}
       />
 
-      {/* FR-04: Sticky Mobile Conversion Bar (Bottom Screen for Mobile & In-App Browser) */}
+      {/* Sticky Mobile Conversion Bar (Bottom Screen for Mobile & In-App Browser) */}
       <StickyMobileBar
         attribution={attribution}
         onOpenBooking={() => handleOpenBooking()}
