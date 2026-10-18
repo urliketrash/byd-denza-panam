@@ -9,9 +9,10 @@ import { MessageCircle, Menu, X } from 'lucide-react';
 interface NavbarProps {
   attribution: Attribution;
   onOpenBooking: () => void;
+  onOpenCredit?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ attribution }) => {
+export const Navbar: React.FC<NavbarProps> = ({ attribution, onOpenCredit }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -21,6 +22,14 @@ export const Navbar: React.FC<NavbarProps> = ({ attribution }) => {
     { label: 'Simulasi Kredit', href: '#simulasi-kredit' },
     { label: 'FAQ', href: '#faq-section' },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href === '#simulasi-kredit') {
+      e.preventDefault();
+      onOpenCredit?.();
+      setMobileMenuOpen(false);
+    }
+  };
 
   const quickWaUrl = buildWhatsAppUrl(buildQuickChatMessage(attribution));
 
@@ -56,6 +65,7 @@ export const Navbar: React.FC<NavbarProps> = ({ attribution }) => {
             <a
               key={link.href}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="whitespace-nowrap text-xs font-semibold tracking-wide text-slate-600 hover:text-slate-900 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded px-1.5 py-1"
             >
               {link.label}
@@ -107,7 +117,7 @@ export const Navbar: React.FC<NavbarProps> = ({ attribution }) => {
               <a
                 key={link.href}
                 href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="whitespace-nowrap rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
               >
                 {link.label}

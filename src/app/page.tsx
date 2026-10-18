@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAttribution } from '@/hooks/useAttribution';
 import { Navbar } from '@/components/Navbar';
 import { DenzaFlagshipHero } from '@/components/DenzaFlagshipHero';
@@ -12,7 +12,7 @@ import { FaqSection } from '@/components/FaqSection';
 import { StickyMobileBar } from '@/components/StickyMobileBar';
 import { Footer } from '@/components/Footer';
 import { JsonLd } from '@/components/JsonLd';
-import { VehicleModel, VehicleVariant } from '@/data/catalog';
+import { VehicleModel, VehicleVariant, SHOWROOM_CATALOG } from '@/data/catalog';
 
 export default function Home() {
   const attribution = useAttribution();
@@ -32,6 +32,23 @@ export default function Home() {
     setIsCreditModalOpen(true);
   };
 
+  const handleOpenDefaultCredit = () => {
+    const defaultModel = SHOWROOM_CATALOG.find((m) => m.id === 'byd-m6') || SHOWROOM_CATALOG[0];
+    handleOpenCredit(defaultModel);
+  };
+
+  useEffect(() => {
+    const handleHash = () => {
+      if (typeof window !== 'undefined' && window.location.hash === '#simulasi-kredit') {
+        handleOpenDefaultCredit();
+      }
+    };
+
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
+
   const handleOpenBooking = (unit?: string, variant?: string, color?: string) => {
     if (unit) setPrefilledBookingUnit(unit);
     if (variant) setPrefilledBookingVariant(variant);
@@ -50,6 +67,7 @@ export default function Home() {
       <Navbar
         attribution={attribution}
         onOpenBooking={() => handleOpenBooking()}
+        onOpenCredit={handleOpenDefaultCredit}
       />
 
       <main className="flex-1">
