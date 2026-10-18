@@ -13,7 +13,7 @@ export const SITE = {
   groupTagline: 'Terbaik dan Terpercaya - Pekanbaru',
   city: 'Pekanbaru',
   region: 'Riau',
-  url: 'https://byd-pekanbaru.com',
+  url: 'https://sc-byd-pekanbaru.com',
   address: 'Jl. HR. Soebrantas No. Km. 11, Simpang Baru, Kec. Tampan, Kota Pekanbaru, Riau',
   hours: 'Senin - Sabtu 08.30 - 17.00, Minggu 09.00 - 15.00',
   whatsappDisplay: '0823 8767 7722',
