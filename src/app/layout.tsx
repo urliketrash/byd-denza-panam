@@ -23,7 +23,7 @@ const jetbrains = JetBrains_Mono({
   display: 'swap',
 });
 
-const title = 'BYD Arista Pekanbaru — Dealer & Digital Showroom Resmi Mobil Listrik & DANZA';
+const title = 'BYD Arista Pekanbaru | Dealer & Digital Showroom Resmi Mobil Listrik & DANZA';
 const description =
   'Showroom digital resmi BYD Arista Pekanbaru, Riau. Cek harga OTR resmi terbaru DANZA D9, BYD Seal, Sealion 7, M6, M6 DM, Atto 3, Dolphin & Atto 1, simulasi kredit instan, serta konsultasi langsung dengan Sales Consultant resmi Suci Primayuri.';
 
@@ -54,12 +54,12 @@ export const metadata: Metadata = {
     locale: 'id_ID',
     url: '/',
     siteName: SITE.name,
-    title: 'BYD Arista Pekanbaru — Dealer & Digital Showroom Resmi',
+    title: 'BYD Arista Pekanbaru | Dealer & Digital Showroom Resmi',
     description: 'DANZA D9 mulai Rp 986,5 Juta, BYD Atto 1 mulai Rp 222 Juta. Konsultasi dan simulasi kredit bersama Suci Primayuri.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BYD Arista Pekanbaru — Dealer Resmi Mobil Listrik & DANZA',
+    title: 'BYD Arista Pekanbaru | Dealer Resmi Mobil Listrik & DANZA',
     description: 'Harga OTR resmi, simulasi kredit, dan konsultasi test drive BYD & DANZA Pekanbaru.',
   },
   robots: { index: true, follow: true },

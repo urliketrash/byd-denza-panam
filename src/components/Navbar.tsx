@@ -133,7 +133,7 @@ export const Navbar: React.FC<NavbarProps> = ({ attribution, onOpenCredit }) => 
               className="w-full flex items-center justify-center gap-2 rounded-xl bg-slate-900 py-3 text-xs font-bold text-white hover:bg-slate-800 active:scale-[0.99] shadow-xs"
             >
               <MessageCircle className="h-4 w-4" />
-              <span>Chat Sales (Suci) — {SITE.whatsappDisplay}</span>
+              <span>Chat Sales (Suci) - {SITE.whatsappDisplay}</span>
             </a>
           </div>
         </div>
