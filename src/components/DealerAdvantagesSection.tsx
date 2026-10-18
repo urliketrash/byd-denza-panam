@@ -22,10 +22,10 @@ export const DealerAdvantagesSection: React.FC = () => {
     {
       icon: Zap,
       badge: 'Home Charging Kit',
-      titleLine1: 'Gratis Wall Charger 7 kW',
-      titleLine2: 'Termasuk Instalasi Rumah',
+      titleLine1: 'Layanan Wall Charger 7 kW',
+      titleLine2: 'Instalasi Resmi di Rumah',
       description:
-        'Setiap pemesanan unit memperoleh 1 unit Wallbox Charger resmi gratis, lengkap survei daya kelistrikan dan jasa instalasi rumah langsung oleh teknisi Arista.',
+        'Layanan penyediaan unit Wallbox Charger resmi beserta survei daya kelistrikan dan instalasi rumah profesional oleh teknisi bersertifikasi Arista.',
     },
     {
       icon: Home,

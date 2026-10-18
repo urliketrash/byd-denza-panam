@@ -81,7 +81,7 @@ export const FAQS: FaqItem[] = [
   {
     question: 'Apakah saya bisa mengajukan test drive langsung di rumah atau kantor saya?',
     answer:
-      'Tentu bisa. Kami menyediakan layanan VIP Home Test Drive gratis tanpa biaya. Anda cukup memilih unit yang ingin dicoba melalui website atau menghubungi Sales Consultant kami Kak Suci Primayuri (0823 8767 7722), dan tim kami akan mengantarkan unit uji coba langsung ke kediaman Anda di wilayah Pekanbaru, Kampar, dan sekitarnya.',
+      'Tentu bisa. Kami menyediakan layanan VIP Home Test Drive tanpa repot datang ke showroom. Anda cukup memilih unit yang ingin dicoba melalui website atau menghubungi Sales Consultant kami (0823 8767 7722), dan tim kami akan mengantarkan unit uji coba langsung ke kediaman Anda di wilayah Pekanbaru, Kampar, dan sekitarnya.',
   },
   {
     question: 'Berapa perbandingan biaya pengisian daya listrik dibanding konsumsi bensin?',
@@ -91,6 +91,6 @@ export const FAQS: FaqItem[] = [
   {
     question: 'Apakah pembeli mendapatkan fasilitas charger rumah (Wallbox Charger)?',
     answer:
-      'Ya! Setiap pembelian unit resmi BYD di Arista Pekanbaru sudah termasuk 1 unit Home Wall Charger 7 kW gratis beserta survei kelistrikan dan jasa instalasi resmi di rumah Anda oleh teknisi bersertifikasi.',
+      'Dealer resmi BYD Arista Pekanbaru menyediakan fasilitas unit Home Wallbox Charger 7 kW resmi beserta layanan survei daya PLN dan jasa instalasi profesional di rumah dengan biaya paket terstandarisasi dealer. Untuk rincian biaya instalasi dan penawaran paket yang berlaku, silakan hubungi Sales Consultant kami.',
   },
 ];

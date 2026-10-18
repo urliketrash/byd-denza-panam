@@ -167,7 +167,7 @@ export const TestDriveBookingSection: React.FC<TestDriveBookingSectionProps> = (
                   <CheckCircle2 className="h-4 w-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs sm:text-sm font-bold text-slate-900">VIP Home Test Drive Gratis</h4>
+                  <h4 className="text-xs sm:text-sm font-bold text-slate-900">VIP Home Test Drive</h4>
                   <p className="text-xs text-slate-500">Unit diantar langsung ke rumah atau kantor Anda di wilayah Pekanbaru dan Kampar.</p>
                 </div>
               </div>
