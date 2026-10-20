@@ -119,7 +119,7 @@ export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBook
                       </div>
                       <div>
                         <span className="block text-[9px] uppercase font-semibold text-slate-500">Jarak Tempuh</span>
-                        <span className="font-mono text-xs sm:text-sm font-bold text-slate-900 whitespace-nowrap">600 KM</span>
+                        <span className="font-mono text-xs sm:text-sm font-bold text-slate-900 whitespace-nowrap">{d9.variants[0].rangeKm} KM</span>
                       </div>
                     </div>
                     <div className="h-6 w-px bg-slate-200" />
@@ -129,7 +129,7 @@ export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBook
                       </div>
                       <div>
                         <span className="block text-[9px] uppercase font-semibold text-slate-500">Baterai Blade</span>
-                        <span className="font-mono text-xs sm:text-sm font-bold text-slate-900 whitespace-nowrap">103,3 kWh</span>
+                        <span className="font-mono text-xs sm:text-sm font-bold text-slate-900 whitespace-nowrap">{d9.variants[0].batteryKwh} kWh</span>
                       </div>
                     </div>
                   </div>
@@ -213,9 +213,15 @@ export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBook
                   />
                 </div>
 
-                <div className="flex items-center justify-between text-xs text-slate-600 py-2 px-3 rounded-xl bg-slate-50 border border-slate-100">
-                  <span className="text-[11px] font-medium">Status Kuota Riau:</span>
-                  <span className="text-[11px] font-bold text-slate-900">Pre-Book Dibuka</span>
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between text-xs text-slate-600 py-1.5 px-3 rounded-xl bg-slate-50 border border-slate-100">
+                    <span className="text-[11px] font-medium">Indikasi OTR Pekanbaru:</span>
+                    <span className="font-mono text-[12px] font-bold text-slate-900">{formatRupiah(b5.variants[0].priceIdr!)}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs text-slate-600 py-1 px-3">
+                    <span className="text-[10px] text-slate-500 font-medium">Status Kuota Riau:</span>
+                    <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">Pre-Book Dibuka</span>
+                  </div>
                 </div>
               </div>
 
@@ -281,9 +287,15 @@ export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBook
                   />
                 </div>
 
-                <div className="flex items-center justify-between text-xs text-slate-600 py-2 px-3 rounded-xl bg-slate-50 border border-slate-100">
-                  <span className="text-[11px] font-medium">Status Alokasi Pekanbaru:</span>
-                  <span className="text-[11px] font-bold text-slate-900">VIP Priority Waitlist</span>
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between text-xs text-slate-600 py-1.5 px-3 rounded-xl bg-slate-50 border border-slate-100">
+                    <span className="text-[11px] font-medium">Indikasi OTR Pekanbaru:</span>
+                    <span className="font-mono text-[12px] font-bold text-slate-900">{formatRupiah(z9gt.variants[0].priceIdr!)}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs text-slate-600 py-1 px-3">
+                    <span className="text-[10px] text-slate-500 font-medium">Spesifikasi Flagship:</span>
+                    <span className="font-mono text-[10px] font-bold text-slate-800">701 KM · 72,6 kWh</span>
+                  </div>
                 </div>
               </div>
 

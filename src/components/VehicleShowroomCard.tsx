@@ -192,10 +192,14 @@ export const VehicleShowroomCard: React.FC<VehicleShowroomCardProps> = ({
             </div>
             <div>
               <span className="block text-[10px] text-slate-500">
-                {activeVariant.rangeKm !== null ? 'Jarak Tempuh' : 'Teknologi'}
+                {activeVariant.rangeKm !== null ? 'Jarak Tempuh' : isM6Dm ? 'Teknologi' : 'Status'}
               </span>
               <span className="font-mono text-xs font-bold text-slate-900 tabular">
-                {activeVariant.rangeKm !== null ? `${activeVariant.rangeKm} KM` : 'Dual Mode (DM)'}
+                {activeVariant.rangeKm !== null
+                  ? `${activeVariant.rangeKm} KM`
+                  : isM6Dm
+                  ? 'Dual Mode (DM)'
+                  : 'Open Indent'}
               </span>
             </div>
           </div>
@@ -207,7 +211,7 @@ export const VehicleShowroomCard: React.FC<VehicleShowroomCardProps> = ({
             Harga OTR Pekanbaru:
           </span>
           <div className="font-mono text-2xl font-bold tracking-tight text-slate-900 tabular mt-0.5">
-            {activeVariant.priceIdr ? formatRupiah(activeVariant.priceIdr) : 'TBA'}
+            {activeVariant.priceIdr ? formatRupiah(activeVariant.priceIdr) : 'Segera Hadir (TBA)'}
           </div>
         </div>
       </div>

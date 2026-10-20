@@ -59,9 +59,9 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
       {
         id: 'denza-d9-flagship',
         name: 'Advanced Luxury EV',
-        batteryKwh: 103.3,
-        rangeKm: 600,
-        priceIdr: 986_500_000,
+        batteryKwh: 115.07,
+        rangeKm: 730,
+        priceIdr: 1_116_500_000,
       },
     ],
   },
@@ -81,10 +81,10 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     variants: [
       {
         id: 'denza-b5-soon',
-        name: 'Flagship Off-Road SUV',
+        name: 'Beyond Boundaries (Arriving Soon)',
         batteryKwh: null,
         rangeKm: null,
-        priceIdr: null,
+        priceIdr: 1_980_000_000,
       },
     ],
   },
@@ -104,10 +104,10 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     variants: [
       {
         id: 'denza-z9-gt-soon',
-        name: 'Grand Tourer Flagship',
-        batteryKwh: null,
-        rangeKm: null,
-        priceIdr: null,
+        name: 'Grand Tourer Flagship (Arriving Soon)',
+        batteryKwh: 72.6,
+        rangeKm: 701,
+        priceIdr: 2_250_000_000,
       },
     ],
   },
@@ -124,6 +124,7 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     imageUrl: '/images/cars/byd-seal.png',
     colors: [
       { name: 'Cosmos Black', hex: '#111317', imageUrl: '/images/cars/byd-seal-black.png' },
+      { name: 'Lavender Grey', hex: '#9B96B1', imageUrl: '/images/cars/byd-seal-lavender.png' },
       { name: 'Arctic Grey', hex: '#64748B', imageUrl: '/images/cars/byd-seal-arctic.png' },
       { name: 'Atlantic Grey', hex: '#334155', imageUrl: '/images/cars/byd-seal-atlantic.png' },
       { name: 'Aurora White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-seal-white.png' },
@@ -131,6 +132,7 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     variants: [
       { id: 'seal-premium', name: 'Premium Ext Range', batteryKwh: 82.5, rangeKm: 650, priceIdr: 656_500_000 },
       { id: 'seal-performance', name: 'Performance AWD', batteryKwh: 82.5, rangeKm: 580, priceIdr: 767_500_000 },
+      { id: 'seal-lavender', name: 'Lavender Grey Edition', batteryKwh: 82.5, rangeKm: 567, priceIdr: 895_000_000 },
     ],
   },
   {
@@ -144,6 +146,7 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     imageUrl: '/images/cars/byd-sealion-7.png',
     colors: [
       { name: 'Atlantis Grey', hex: '#2B547E', imageUrl: '/images/cars/byd-sealion-7-atlantis.png' },
+      { name: 'Lavender Grey', hex: '#9B96B1', imageUrl: '/images/cars/byd-sealion-7-lavender.png' },
       { name: 'Shark Grey', hex: '#475569', imageUrl: '/images/cars/byd-sealion-7-shark.png' },
       { name: 'Cosmos Black', hex: '#111317', imageUrl: '/images/cars/byd-sealion-7-black.png' },
       { name: 'Aurora White', hex: '#F8FAFC', border: true, imageUrl: '/images/cars/byd-sealion-7-white.png' },
@@ -151,6 +154,7 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     variants: [
       { id: 'sealion7-premium', name: 'Premium Ext Range', batteryKwh: 82.5, rangeKm: 567, priceIdr: 640_500_000 },
       { id: 'sealion7-performance', name: 'Performance AWD', batteryKwh: 82.5, rangeKm: 542, priceIdr: 730_500_000 },
+      { id: 'sealion7-lavender', name: 'Lavender Grey Edition', batteryKwh: 91.39, rangeKm: 650, priceIdr: 899_000_000 },
     ],
   },
   {
@@ -170,8 +174,8 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
     ],
     variants: [
       { id: 'm6-standard', name: 'Standard', batteryKwh: 55.4, rangeKm: 420, priceIdr: 415_000_000 },
-      { id: 'm6-superior-7', name: 'Superior 7 Seater', batteryKwh: 71.8, rangeKm: 530, priceIdr: 443_000_000 },
-      { id: 'm6-superior-captain', name: 'Superior Captain S', batteryKwh: 71.8, rangeKm: 530, priceIdr: 453_000_000 },
+      { id: 'm6-superior-7', name: 'Superior 7 Seater', batteryKwh: 71.8, rangeKm: 530, priceIdr: 455_000_000 },
+      { id: 'm6-superior-captain', name: 'Superior Captain S', batteryKwh: 71.8, rangeKm: 530, priceIdr: 465_000_000 },
     ],
   },
   {
@@ -195,6 +199,34 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
       { id: 'm6-dm-cross-adv', name: 'Advanced', subCategory: 'CROSS', batteryKwh: 18.3, rangeKm: null, priceIdr: 380_500_000 },
       { id: 'm6-dm-cross-sup', name: 'Superior', subCategory: 'CROSS', batteryKwh: 18.3, rangeKm: null, priceIdr: 400_500_000 },
       { id: 'm6-dm-cross-cap', name: 'Superior Captain S', subCategory: 'CROSS', batteryKwh: 18.3, rangeKm: null, priceIdr: 410_500_000 },
+    ],
+  },
+  {
+    id: 'byd-ti7',
+    brand: 'BYD',
+    name: 'BYD TI 7',
+    category: 'SUV',
+    bodyLabel: 'Flagship Off-Road SUV',
+    status: 'ARRIVING_SOON',
+    tagline: 'Open Indent — Ultimate Intelligent Off-Road EV SUV',
+    imageUrl: '/images/cars/byd-ti7.png',
+    colors: [
+      { name: 'Emerald Green', hex: '#235D53', imageUrl: '/images/cars/byd-ti7-emerald.png' },
+      { name: 'Atlantis Grey', hex: '#3B5569', imageUrl: '/images/cars/byd-ti7-atlantis.png' },
+      { name: 'Jungle Sand', hex: '#635B48', imageUrl: '/images/cars/byd-ti7-jungle.png' },
+      { name: 'Obsidian Black', hex: '#111317', imageUrl: '/images/cars/byd-ti7-black.png' },
+      { name: 'Silver Slate', hex: '#9CA3AF', imageUrl: '/images/cars/byd-ti7-silver.png' },
+      { name: 'Champagne Gold', hex: '#D4AF37', imageUrl: '/images/cars/byd-ti7-gold.png' },
+      { name: 'Titanium Grey', hex: '#4B5563', imageUrl: '/images/cars/byd-ti7-grey.png' },
+    ],
+    variants: [
+      {
+        id: 'ti7-flagship',
+        name: 'Open Indent Flagship AWD',
+        batteryKwh: null,
+        rangeKm: null,
+        priceIdr: null,
+      },
     ],
   },
   {

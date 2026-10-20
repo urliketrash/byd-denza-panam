@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice - Pengembangan Website BYD Arista Pekanbaru</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f1f5f9;
+      color: #0f172a;
+      padding: 40px 20px;
+      line-height: 1.5;
+    }
+
+    .invoice-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 48px;
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+      border: 1px solid #e2e8f0;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+    }
+
+    .brand-title {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+    }
+
+    .brand-subtitle {
+      font-size: 13px;
+      color: #64748b;
+      margin-top: 4px;
+    }
+
+    .invoice-tag {
+      text-align: right;
+    }
+
+    .badge-paid {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background-color: #ecfdf5;
+      color: #059669;
+      border: 1px solid #a7f3d0;
+      margin-bottom: 8px;
+    }
+
+    .invoice-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .invoice-date {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    .parties-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 36px;
+    }
+
+    .party-card {
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .party-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+
+    .party-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .party-detail {
+      font-size: 13px;
+      color: #475569;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .table-container {
+      margin-bottom: 32px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #475569;
+      padding: 12px 16px;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    th:first-child { border-top-left-radius: 12px; border-bottom-left-radius: 12px; }
+    th:last-child { border-top-right-radius: 12px; border-bottom-right-radius: 12px; text-align: right; }
+
+    td {
+      padding: 18px 16px;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 13px;
+      vertical-align: top;
+    }
+
+    td:last-child {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .item-title {
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 14px;
+    }
+
+    .item-desc {
+      color: #64748b;
+      font-size: 12px;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .summary-section {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 36px;
+    }
+
+    .summary-box {
+      width: 320px;
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 10px;
+    }
+
+    .summary-row.total {
+      border-top: 2px solid #e2e8f0;
+      padding-top: 12px;
+      margin-top: 12px;
+      margin-bottom: 0;
+      font-size: 16px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .summary-row.total span:last-child {
+      font-family: 'JetBrains Mono', monospace;
+      color: #059669;
+    }
+
+    .receipt-box {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 16px;
+      padding: 18px 24px;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .receipt-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #065f46;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .receipt-text {
+      font-size: 13px;
+      color: #047857;
+      line-height: 1.5;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #94a3b8;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 24px;
+    }
+
+    .actions-bar {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.15s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #0f172a;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #1e293b;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .invoice-wrapper {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .actions-bar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print / Action Bar -->
+  <div class="actions-bar">
+    <button class="btn btn-primary" onclick="window.print()">
+      🖨️ Cetak / Simpan PDF
+    </button>
+  </div>
+
+  <div class="invoice-wrapper">
+    <!-- Header -->
+    <div class="header">
+      <div>
+        <h1 class="brand-title">INVOICE TAGIHAN</h1>
+        <p class="brand-subtitle">Layanan Jasa Pembuatan Website & Pengadaan Domain</p>
+      </div>
+      <div class="invoice-tag">
+        <span class="badge-paid">STATUS: LUNAS (PAID)</span>
+        <div class="invoice-number">#INV-BYD-202610-001</div>
+        <div class="invoice-date">Tanggal: 18 Oktober 2026</div>
+      </div>
+    </div>
+
+    <!-- Parties Grid -->
+    <div class="parties-grid">
+      <div class="party-card">
+        <div class="party-label">Ditagihkan Kepada (Klien):</div>
+        <div class="party-name">Suci Primayuri</div>
+        <div class="party-detail">
+          Official Sales Consultant BYD Arista Pekanbaru<br>
+          PT Arista Jaya Lestari (BYD Panam)<br>
+          WhatsApp: 0823 8767 7722
+        </div>
+      </div>
+
+      <div class="party-card">
+        <div class="party-label">Penyedia Jasa (Web Developer):</div>
+        <div class="party-name">Sigit Sadida</div>
+        <div class="party-detail">
+          Fullstack Web Developer & Digital Specialist<br>
+          Email: sigit.sadida@gmail.com<br>
+          Pekanbaru, Riau
+        </div>
+      </div>
+    </div>
+
+    <!-- Deliverables Table -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 50px;">No</th>
+            <th>Deskripsi Pekerjaan / Layanan</th>
+            <th style="width: 180px;">Biaya</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>
+              <div class="item-title">Pengembangan Website Digital Showroom BYD Arista Pekanbaru</div>
+              <div class="item-desc">
+                • Desain arsitektur modern "Pure Architectural White Showroom" (Full Responsif Mobile/Tablet/PC).<br>
+                • Showcase katalog lengkap seluruh lini mobil listrik BYD (Seal, Sealion 7, Atto 3, Dolphin, M6, M6 DM, Atto 1) & DANZA D9.<br>
+                • Spesifikasi teknis interaktif, galeri foto resolusi tinggi, & komparasi tipe.<br>
+                • Integrasi sistem direct WhatsApp booking test drive & konsultasi sales resmi.
+              </div>
+            </td>
+            <td>Rp 1.500.000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <div class="item-title">Integrasi Modul Simulasi Kredit Resmi (BCA Finance & Fleksibel)</div>
+              <div class="item-desc">
+                • Simulasi resmi BCA Finance dengan skema rate khusus mobil listrik EV DP 25% (17 varian lengkap).<br>
+                • Simulasi fleksibel DP 15%-50% & tenor 1-5 tahun.<br>
+                • Tombol pengajuan hitungan instan terformat ke WhatsApp Sales Consultant.
+              </div>
+            </td>
+            <td>Termasuk (Gratis)</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <div class="item-title">Pengadaan Domain Kustom Resmi (sc-byd-pekanbaru.com)</div>
+              <div class="item-desc">
+                • Pendaftaran nama domain internasional (.com) aktif selama 1 Tahun via Domainesia.<br>
+                • Konfigurasi DNS Management & Registrar Lock proteksi keamanan kepemilikan domain.
+              </div>
+            </td>
+            <td>Rp 500.000</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <div class="item-title">Setup Cloudflare Edge Hosting, CDN & Sertifikat Keamanan SSL</div>
+              <div class="item-desc">
+                • Hosting cloud super cepat di jaringan global Cloudflare Pages.<br>
+                • Sertifikat keamanan SSL (HTTPS gembok hijau aman seumur hidup).<br>
+                • Optimasi SEO On-Page, OpenGraph Preview Card WhatsApp, & Schema Google Search.
+              </div>
+            </td>
+            <td>Termasuk (Gratis)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Summary Box -->
+    <div class="summary-section">
+      <div class="summary-box">
+        <div class="summary-row">
+          <span>Subtotal Jasa Website</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-weight: 700;">Rp 1.500.000</span>
+        </div>
+        <div class="summary-row">
+          <span>Biaya Domain & DNS (1 Tahun)</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-weight: 700;">Rp 500.000</span>
+        </div>
+        <div class="summary-row">
+          <span>Cloud Hosting & SSL</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #059669;">Rp 0 (Bonus)</span>
+        </div>
+        <div class="summary-row total">
+          <span>TOTAL TAGIHAN</span>
+          <span>Rp 2.000.000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paid Confirmation Receipt Box -->
+    <div class="receipt-box">
+      <div class="receipt-title">STATUS PEMBAYARAN: LUNAS</div>
+      <div class="receipt-text">
+        Total tagihan sebesar <strong>Rp 2.000.000</strong> telah diterima lunas.<br>
+        Dokumen ini sah sebagai tanda terima & bukti pelunasan resmi pembuatan website digital showroom BYD Arista Pekanbaru.
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Terima kasih atas kerja sama dan kepercayaannya.</p>
+      <p style="margin-top: 4px;">Website resmi dapat diakses di: <strong>https://sc-byd-pekanbaru.com/</strong></p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -29,7 +29,25 @@ export const JsonLd: React.FC = () => {
           email: SITE.sales.email,
         },
         openingHours: 'Mo-Sa 08:30-17:00, Su 09:00-15:00',
-        priceRange: 'Rp 222.000.000 - Rp 986.500.000',
+        priceRange: 'Rp 222.000.000 - Rp 2.250.000.000',
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 0.468205,
+          longitude: 101.378932,
+        },
+        hasMap: 'https://maps.google.com/?q=BYD+Arista+Pekanbaru+Panam',
+        areaServed: [
+          { '@type': 'City', name: 'Pekanbaru' },
+          { '@type': 'AdministrativeArea', name: 'Kampar' },
+          { '@type': 'AdministrativeArea', name: 'Siak' },
+          { '@type': 'City', name: 'Dumai' },
+          { '@type': 'AdministrativeArea', name: 'Pelalawan' },
+          { '@type': 'AdministrativeArea', name: 'Riau' },
+        ],
+        sameAs: [
+          SITE.sales.instagramUrl,
+          SITE.sales.tiktokUrl,
+        ],
       },
       {
         '@type': 'FAQPage',

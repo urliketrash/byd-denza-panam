@@ -25,7 +25,7 @@ const jetbrains = JetBrains_Mono({
 
 const title = 'BYD Arista Pekanbaru | Dealer & Digital Showroom Resmi Mobil Listrik & DANZA';
 const description =
-  'Showroom digital resmi BYD Arista Pekanbaru, Riau. Cek harga OTR resmi terbaru DANZA D9, BYD Seal, Sealion 7, M6, M6 DM, Atto 3, Dolphin & Atto 1, simulasi kredit instan, serta konsultasi langsung dengan Sales Consultant resmi Suci Primayuri.';
+  'Showroom digital resmi BYD Arista Pekanbaru, Riau. Cek harga OTR resmi terbaru DANZA D9, DENZA B5, Z9 GT, BYD Seal, Sealion 7, BYD TI 7, M6, M6 DM, Atto 3, Dolphin & Atto 1, simulasi kredit instan, serta konsultasi langsung dengan Sales Consultant resmi Suci Primayuri.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -39,12 +39,18 @@ export const metadata: Metadata = {
   keywords: [
     'BYD Pekanbaru',
     'DANZA Pekanbaru',
+    'DENZA Pekanbaru',
+    'BYD Panam Pekanbaru',
     'Dealer BYD Riau',
     'Harga BYD Seal Pekanbaru',
     'Harga DANZA D9',
+    'DENZA B5',
+    'DENZA Z9 GT',
+    'BYD TI 7',
     'BYD M6 Pekanbaru',
+    'BYD Sealion 7',
     'Mobil Listrik Pekanbaru',
-    'Arista Group',
+    'Arista Group Pekanbaru',
     'BYD Soebrantas',
     'Sales BYD Pekanbaru Suci',
   ],
@@ -55,12 +61,15 @@ export const metadata: Metadata = {
     url: '/',
     siteName: SITE.name,
     title: 'BYD Arista Pekanbaru | Dealer & Digital Showroom Resmi',
-    description: 'DANZA D9 mulai Rp 986,5 Juta, BYD Atto 1 mulai Rp 222 Juta. Konsultasi dan simulasi kredit bersama Suci Primayuri.',
+    description: 'DANZA D9 mulai Rp 1,11 Miliar, BYD Atto 1 mulai Rp 222 Juta, Open Indent BYD TI 7 & DENZA B5. Konsultasi dan simulasi kredit bersama Suci Primayuri.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'BYD Arista Pekanbaru | Dealer Resmi Mobil Listrik & DANZA',
     description: 'Harga OTR resmi, simulasi kredit, dan konsultasi test drive BYD & DANZA Pekanbaru.',
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
   },
   robots: { index: true, follow: true },
 };
