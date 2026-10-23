@@ -84,7 +84,7 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
         name: 'Beyond Boundaries (Arriving Soon)',
         batteryKwh: null,
         rangeKm: null,
-        priceIdr: 1_980_000_000,
+        priceIdr: null,
       },
     ],
   },
@@ -105,7 +105,7 @@ export const SHOWROOM_CATALOG: VehicleModel[] = [
       {
         id: 'denza-z9-gt-soon',
         name: 'Grand Tourer Flagship (Arriving Soon)',
-        batteryKwh: 72.6,
+        batteryKwh: 122.49,
         rangeKm: 701,
         priceIdr: 2_250_000_000,
       },

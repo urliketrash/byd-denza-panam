@@ -215,8 +215,8 @@ export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBook
 
                 <div className="space-y-1.5">
                   <div className="flex items-center justify-between text-xs text-slate-600 py-1.5 px-3 rounded-xl bg-slate-50 border border-slate-100">
-                    <span className="text-[11px] font-medium">Indikasi OTR Pekanbaru:</span>
-                    <span className="font-mono text-[12px] font-bold text-slate-900">{formatRupiah(b5.variants[0].priceIdr!)}</span>
+                    <span className="text-[11px] font-medium">Harga OTR Pekanbaru:</span>
+                    <span className="font-mono text-[12px] font-bold text-slate-700">Segera Diumumkan</span>
                   </div>
                   <div className="flex items-center justify-between text-xs text-slate-600 py-1 px-3">
                     <span className="text-[10px] text-slate-500 font-medium">Status Kuota Riau:</span>
@@ -294,7 +294,7 @@ export const DenzaFlagshipHero: React.FC<DenzaFlagshipHeroProps> = ({ onOpenBook
                   </div>
                   <div className="flex items-center justify-between text-xs text-slate-600 py-1 px-3">
                     <span className="text-[10px] text-slate-500 font-medium">Spesifikasi Flagship:</span>
-                    <span className="font-mono text-[10px] font-bold text-slate-800">701 KM · 72,6 kWh</span>
+                    <span className="font-mono text-[10px] font-bold text-slate-800">701 KM · 122,49 kWh</span>
                   </div>
                 </div>
               </div>
